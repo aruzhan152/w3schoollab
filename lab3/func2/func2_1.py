@@ -75,3 +75,55 @@ movies = [
 "category": "Romance"
 }
 ]
+
+
+
+def Find(n):
+    for i in movies:
+        if i["name"]==n and i["imdb"]>5.5:
+            return True
+    return False
+
+def Score():
+    for i in movies:
+        if i["imdb"]>5.5:
+            print(i['name'])
+            
+def Categ(category):
+    for i in movies:
+        if i["category"]==category:
+            print(i["name"])
+#1
+n=str(input())
+cn=Find(n)
+print(cn)
+#2
+cn=Score()
+#3
+category=str(input())
+cn=Categ(category)
+#4
+def Average():
+    sum=0
+    for i in movies:
+        sum+=i['imdb']
+    aver=sum/(len(movies))
+    print(aver)
+    
+cn=Average()
+#5
+def Anamnau(catname):
+    sum=0
+    count=0
+    for i in movies:
+        if i['category']==catname:
+            sum+=i['imdb']
+            count+=1
+    return sum/count
+
+
+print(Anamnau('Romance'))
+        
+
+        
+        
