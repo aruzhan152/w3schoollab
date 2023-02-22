@@ -94,7 +94,6 @@ def Categ(category):
         if i["category"]==category:
             print(i["name"])
 #1
-n=str(input())
 cn=Find(n)
 print(cn)
 #2
